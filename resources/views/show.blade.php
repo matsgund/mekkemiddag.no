@@ -43,7 +43,7 @@ $newArray2 = explode(',', $array);
 
     <!--row 2-->
     <div class="row2-recipe">
-        <img src="{{asset('storage/app/public/' . $posts->picture)}}" alt="Bilde av oppskrift">
+        <img src="{{asset('storage/app/public/full_size_images/' . $posts->picture)}}" alt="Bilde av oppskrift">
     </div>
 
     <!--row 3-->
