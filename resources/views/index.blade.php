@@ -40,7 +40,7 @@
         <div class="slider-wrapper">
             <div class=inner>
                 <article class="slider-article">
-                    <img  src="{{asset('storage/app/public/pizza.jpg')}}"/>
+                    <img  src="{{asset('storage/app/public/full_size_images/pizza.jpg')}}"/>
                     <div class="overlay-slider"> </div>
                     <div class="overlay-slider-textbox">
                         <h3>Pizza  <br>med parmaskinke</h3>
@@ -50,7 +50,7 @@
                 </article>
 
                 <article class="slider-article">
-                    <img  src="{{asset('storage/app/public/bread.jpg')}}"/>
+                    <img  src="{{asset('storage/app/public/full_size_images/bread.jpg')}}"/>
                     <div class="overlay-slider"> </div>
                     <div class="overlay-slider-textbox">
                         <h3>Brød  <br>frøloff</h3>
@@ -60,12 +60,12 @@
                 </article>
 
                 <article class="slider-article">
-                    <img  src="{{asset('storage/app/public/tomatosoup.jpg')}}"/>
+                    <img  src="{{asset('storage/app/public/full_size_images/tomatosoup.jpg')}}"/>
                     <div class="overlay-slider"> </div>
                     <div class="overlay-slider-textbox">
                         <h3>Tomat <br>suppe</h3>
                         <p>Mars 30, 2018  <i class="fa fa-circle"></i>Hovedrett</p>
-                        <a href="/post/70">Se oppskriften</a>
+                        <a href="/post/71">Se oppskriften</a>
                     </div>
                 </article>
             
@@ -124,7 +124,7 @@
             @foreach($posts as $post)
             <article class="article-search {{$post->category}} ">
              <a href="/post/{{$post->id}}">    
-                <img class="article-img" src="{{asset('storage/app/public/' . $post->picture)}}" alt=" " />
+                <img class="article-img" src="{{asset('storage/app/public/thumbnails/' . $post->picture)}}" alt=" " />
              </a>
                 <p></p>
                 <p>{{$post->created_at->toFormattedDateString()}} </p>
