@@ -1,8 +1,8 @@
 <!--Navbar -->
 <div class="topnav" id="myTopnav">
-    <a href="/adminindex"> <i class="fa fa-home icon-padding-nav" aria-hidden="true""></i>Alle oppskrifter</a>
-    <a href="/create"><i class="fa fa-plus icon-padding-nav" aria-hidden="true"></i>Legg til ny oppskrift</a>
-    <a id="log-ut" href="/logout"> <i class="fa fa-sign-out  icon-padding-nav" aria-hidden="true"></i>logg ut</a>
+    <a href="{{ env('APP_URL') }}/adminindex"> <i class="fa fa-home icon-padding-nav" aria-hidden="true""></i>Alle oppskrifter</a>
+    <a href="{{ env('APP_URL') }}/create"><i class="fa fa-plus icon-padding-nav" aria-hidden="true"></i>Legg til ny oppskrift</a>
+    <a id="log-ut" href="{{ env('APP_URL') }}/logout"> <i class="fa fa-sign-out  icon-padding-nav" aria-hidden="true"></i>logg ut</a>
     <a href="javascript:void(0);" class="icon hamburger-icon" onclick="myFunction()">
         <div ></div>
         <div ></div>

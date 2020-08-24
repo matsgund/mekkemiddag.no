@@ -18,8 +18,8 @@ $newArray2 = explode(',', $array);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Oppskrifter</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/styling.css">
-    <link rel="stylesheet" href="../css/recipe.css">
+    <link rel="stylesheet" href="{{ env('APP_CSS_FOLDER_LOCATION1') }}css/styling.css">
+    <link rel="stylesheet" href="{{ env('APP_CSS_FOLDER_LOCATION1') }}css/recipe.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>

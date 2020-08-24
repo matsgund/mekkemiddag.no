@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Oppskrifter</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/styling.css">
-    <link rel="stylesheet" href="./css/slider.css">
-    <link rel="stylesheet" href="./css/gallary-recipes.css">
+    <link rel="stylesheet" href="{{ env('APP_CSS_FOLDER_LOCATION2') }}css/styling.css">
+    <link rel="stylesheet" href="{{ env('APP_CSS_FOLDER_LOCATION2') }}css/slider.css">
+    <link rel="stylesheet" href="{{ env('APP_CSS_FOLDER_LOCATION2') }}css/gallary-recipes.css">
     <!--Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
@@ -125,17 +125,17 @@
 
             @foreach($posts as $post)
                 <article class="article-search {{$post->category}} ">
-                    <a href="/post/{{$post->id}}">
+                    <a href="{{ env('APP_URL') }}/post/{{$post->id}}">
                         <img class="article-img" src="{{asset('storage/app/public/thumbnails/' . $post->picture)}}" alt="Bilde av matretten " />
                     </a>
                     <p></p>
                     <p>{{$post->created_at->toFormattedDateString()}} </p>
-                    <a class="recipes-title-gallary" href="/post/{{$post->id}}">
+                    <a class="recipes-title-gallary" href="{{ env('APP_URL') }}/post/{{$post->id}}">
                         {{$post->title}}
                     </a>
                     <br>
-                    <a class="button button2" href="/edit/{{$post->id}}">Rediger</a>
-                    <a class="button button3" onclick="return confirm('Er du sikker på at du vil slette denne posten?')" href="/delete/{{$post->id}}">Slett</a>
+                    <a class="button button2" href="{{ env('APP_URL') }}/edit/{{$post->id}}">Rediger</a>
+                    <a class="button button3" onclick="return confirm('Er du sikker på at du vil slette denne posten?')" href="{{ env('APP_URL') }}/delete/{{$post->id}}">Slett</a>
                 </article>
             @endforeach
 
@@ -157,6 +157,6 @@
 
 
 </body>
-<script src="./js/searchScript.js"></script>
+<script src="{{ env('APP_CSS_FOLDER_LOCATION2') }}js/searchScript.js"></script>
 
 </html>

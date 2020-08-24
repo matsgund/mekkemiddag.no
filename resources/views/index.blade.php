@@ -45,7 +45,7 @@
                     <div class="overlay-slider-textbox">
                         <h3>Pizza  <br>med parmaskinke</h3>
                         <p>Januar 30, 2018  <i class="fa fa-circle"></i>Hovedrett</p>
-                        <a href="/post/70">Se oppskriften</a>
+                        <a href="{{ env('APP_URL') }}/post/70">Se oppskriften</a>
                     </div>
                 </article>
 
@@ -55,7 +55,7 @@
                     <div class="overlay-slider-textbox">
                         <h3>Brød  <br>frøloff</h3>
                         <p>Februar 30, 2018  <i class="fa fa-circle"></i>Bakverk</p>
-                        <a href="/post/67">Se oppskriften</a>
+                        <a href="{{ env('APP_URL') }}/post/67">Se oppskriften</a>
                     </div>
                 </article>
 
@@ -65,7 +65,7 @@
                     <div class="overlay-slider-textbox">
                         <h3>Tomat <br>suppe</h3>
                         <p>Mars 30, 2018  <i class="fa fa-circle"></i>Hovedrett</p>
-                        <a href="/post/71">Se oppskriften</a>
+                        <a href="{{ env('APP_URL') }}/post/71">Se oppskriften</a>
                     </div>
                 </article>
             
@@ -123,12 +123,12 @@
 
             @foreach($posts as $post)
             <article class="article-search {{$post->category}} ">
-             <a href="/post/{{$post->id}}">    
+             <a href="{{ env('APP_URL') }}/post/{{$post->id}}">
                 <img class="article-img" src="{{asset('storage/app/public/thumbnails/' . $post->picture)}}" alt=" " />
              </a>
                 <p></p>
                 <p>{{$post->created_at->toFormattedDateString()}} </p>
-                <a class="recipes-title-gallary" href="/post/{{$post->id}}">
+                <a class="recipes-title-gallary" href="{{ env('APP_URL') }}/post/{{$post->id}}">
                     {{$post->title}}
                 </a>
             </article>

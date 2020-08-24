@@ -7,9 +7,9 @@
     <title>Oppskrifter</title>
     <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/styling.css">
-    <link rel="stylesheet" href="../css/recipe.css">
-    <link rel="stylesheet" href="../css/create.css">
+    <link rel="stylesheet" href="{{ env('APP_CSS_FOLDER_LOCATION1') }}css/styling.css">
+    <link rel="stylesheet" href="{{ env('APP_CSS_FOLDER_LOCATION1') }}css/recipe.css">
+    <link rel="stylesheet" href="{{ env('APP_CSS_FOLDER_LOCATION1') }}css/create.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
