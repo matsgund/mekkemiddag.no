@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
+use Intervention\Image\Image;
 
 class PostController extends Controller
 
@@ -87,7 +88,17 @@ class PostController extends Controller
             $fileName = $image->getClientOriginalName('picture');
 
             //Stores image to public storage with original filename
-            $image->storeAs('public', $fileName);
+            $image->storeAs('public/full_size_images', $fileName);
+            $image->storeAs('public/thumbnails', $fileName);
+
+            //Resize image here
+            $thumbnailpath = public_path('public/thumbnails/'.$fileName);
+            $img = Image::make($thumbnailpath)->resize(400, 150, function($constraint) {
+                $constraint->aspectRatio();
+            });
+
+            $img->save($thumbnailpath);
+
         } else {
 
             $fileName = $posts->picture;
@@ -142,7 +153,16 @@ class PostController extends Controller
         $fileName = $image->getClientOriginalName('picture');
 
         //Stores image to public storage with original filename
-        $image->storeAs('public', $fileName);
+        $image->storeAs('public/full_size_images', $fileName);
+        $image->storeAs('public/thumbnails', $fileName);
+
+        //Resize image here
+        $thumbnailpath = public_path('public/thumbnails/'.$fileName);
+        $img = Image::make($thumbnailpath)->resize(400, 150, function($constraint) {
+            $constraint->aspectRatio();
+        });
+
+        $img->save($thumbnailpath);
 
         //Stores inputs from form to database
         $posts->title = request('title');

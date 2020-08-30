@@ -57,34 +57,34 @@
             </div>
             <div class="form-group">
                 <label for="Estimated_time">Estimert tid</label>
-                <input type="number" class="form-control" id="" name="estimated_time" placeholder="eksempel: 60" value="{{$posts->estimated_time}}" required>
+                <input type="number" class="form-control" name="estimated_time" placeholder="eksempel: 60" value="{{$posts->estimated_time}}" required>
             </div>
             <div class="form-group">
                 <label for="Upload_image">Last opp bilde</label>
-                <input type="file" class="form-control-file" id="" name="picture" >
+                <input type="file" class="form-control-file"  name="picture" >
             </div>
             <br>
             <hr>
             <br>
             <div class="form-group">
                 <label for="Ingrediens_title_1">Ingrediens tittel tabell 1</label>
-                <input type="text" class="form-control" id="" name="ingredients_title_1" placeholder="eksempel: Pizzabunn" value="{{$posts->ingredients_title_1}}">
+                <input type="text" class="form-control" name="ingredients_title_1" placeholder="eksempel: Pizzabunn" value="{{$posts->ingredients_title_1}}">
             </div>
             <div class="form-group">
                 <label for="Ingredients_list_1">Ingredienser1</label>
-                <textarea class="form-control " id="" name="ingredients_1" placeholder="eksempel: Melk 1l, Mel 2kg, Salt 1ts" rows="2" required >{{$posts->ingredients_1}}</textarea>
+                <textarea class="form-control"  name="ingredients_1" placeholder="eksempel: Melk 1l, Mel 2kg, Salt 1ts" rows="2" required >{{$posts->ingredients_1}}</textarea>
             </div>
             <div class="form-group">
                 <label for="Ingrediens_title_2">Ingrediens tittel tabell 2</label>
-                <input type="text" class="form-control" id="" name="ingredients_title_2" placeholder="eksempel: fyll" value="{{$posts->ingredients_title_2}}">
+                <input type="text" class="form-control"  name="ingredients_title_2" placeholder="eksempel: fyll" value="{{$posts->ingredients_title_2}}">
             </div>
             <div class="form-group">
                 <label for="Ingredients_list_2">Ingredienser2</label>
-                <textarea class="form-control " id="" name="ingredients_2" placeholder="eksempel: Ost 3dl, Skinke 200g, Salt 1ts" rows="2" >{{$posts->ingredients_2}}</textarea>
+                <textarea class="form-control "  name="ingredients_2" placeholder="eksempel: Ost 3dl, Skinke 200g, Salt 1ts" rows="2" >{{$posts->ingredients_2}}</textarea>
             </div>
             <div class="form-group">
                 <label for="Description">Fremgangsmåte</label>
-                <textarea class="form-control " id="" name="description" rows="12" required >{{$posts->description}}</textarea>
+                <textarea class="form-control "  name="description" rows="12" required >{{$posts->description}}</textarea>
             </div>
             <br>
             <hr>
