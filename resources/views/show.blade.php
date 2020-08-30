@@ -33,73 +33,75 @@ $newArray2 = explode(',', $array);
 <body>
 
 <!--Container start -->
-<div class="container">
+<div class="cointainer-wrapper">
+    <div class="container">
 
-    <!-- row 1 -->
-    <div class="row1">
-        <h2>{{$posts->title}}</h2>
-        <h3>Tilbereding: {{$posts->estimated_time}} minutter<i class="fa fa-circle"></i>{{$posts->category}}</h3>
-    </div>
-
-    <!--row 2-->
-    <div class="row2-recipe">
-        <img src="{{asset('storage/app/public/full_size_images/' . $posts->picture)}}" alt="Bilde av oppskrift">
-    </div>
-
-    <!--row 3-->
-    <div class="row3-recipe">
-        <h3>Ingredienser</h3>
-    </div>
-
-    <!--row 4-->
-    <div class="row4-recipe">
-        <div class="ingrediens-box">
-            <h4>{{$posts->ingredients_title_1}}</h4>
-            <ul>
-                @foreach($newArray as $item)
-                    <li>{{$item}}</li>
-                @endforeach
-            </ul>
+        <!-- row 1 -->
+        <div class="row1">
+            <h2>{{$posts->title}}</h2>
+            <h3>Tilbereding: {{$posts->estimated_time}} minutter<i class="fa fa-circle"></i>{{$posts->category}}</h3>
         </div>
 
-        <!--Checks if ingredients list 2 is empty -->
-        @if($newArray2[0] !="")
+        <!--row 2-->
+        <div class="row2-recipe">
+            <img src="{{asset('storage/app/public/full_size_images/' . $posts->picture)}}" alt="Bilde av oppskrift">
+        </div>
+
+        <!--row 3-->
+        <div class="row3-recipe">
+            <h3>Ingredienser</h3>
+        </div>
+
+        <!--row 4-->
+        <div class="row4-recipe">
             <div class="ingrediens-box">
-                <h4>{{$posts->ingredients_title_2}}</h4>
+                <h4>{{$posts->ingredients_title_1}}</h4>
                 <ul>
-                    @foreach($newArray2 as $item)
+                    @foreach($newArray as $item)
                         <li>{{$item}}</li>
                     @endforeach
                 </ul>
             </div>
-        @endif
+
+            <!--Checks if ingredients list 2 is empty -->
+            @if($newArray2[0] !="")
+                <div class="ingrediens-box">
+                    <h4>{{$posts->ingredients_title_2}}</h4>
+                    <ul>
+                        @foreach($newArray2 as $item)
+                            <li>{{$item}}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+        </div>
+
+        <!--row 5-->
+        <div class="row5-recipe">
+            <h3>Fremgangsmåte</h3>
+            <!-- !!nl2br will display line brakes made by users input-->
+            <p>{!!nl2br($posts->description)!!}</p>
+            <br>
+                <!--Checks if there is a timer and temperature set -->
+                <p>
+                    @if($posts->timer != 0 && $posts->temperature != 0 )
+                    <i class="fas fa-thermometer-empty"></i>{{$posts->temperature}}C
+                    <i class="far fa-clock"></i>{{$posts->timer}} minutter
+                    @endif
+                </p>
+        </div>
+
+        <!--row 5 footer-->
+        <div class="row5">
+
+            <footer>
+                <p class="copy-right">Copyright <i class="fa fa-copyright"></i> 2018 – Mats Gundersen </p>
+            </footer>
+
+        </div>
+
+        <!--Container end -->
     </div>
-
-    <!--row 5-->
-    <div class="row5-recipe">
-        <h3>Fremgangsmåte</h3>
-        <!-- !!nl2br will display line brakes made by users input-->
-        <p>{!!nl2br($posts->description)!!}</p>
-        <br>
-            <!--Checks if there is a timer and temperature set -->
-            <p>
-                @if($posts->timer != 0 && $posts->temperature != 0 )
-                <i class="fas fa-thermometer-empty"></i>{{$posts->temperature}}C
-                <i class="far fa-clock"></i>{{$posts->timer}} minutter
-                @endif
-            </p>
-    </div>
-
-    <!--row 5 footer-->
-    <div class="row5">
-
-        <footer>
-            <p class="copy-right">Copyright <i class="fa fa-copyright"></i> 2018 – Mats Gundersen </p>
-        </footer>
-
-    </div>
-
-    <!--Container end -->
 </div>
 </body>
 </html>

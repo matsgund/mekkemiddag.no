@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
-use Intervention\Image\Image;
+use Image;
 
 class PostController extends Controller
 
@@ -92,9 +92,10 @@ class PostController extends Controller
             $image->storeAs('public/thumbnails', $fileName);
 
             //Resize image here
-            $thumbnailpath = public_path('public/thumbnails/'.$fileName);
-            $img = Image::make($thumbnailpath)->resize(400, 150, function($constraint) {
+            $thumbnailpath = 'storage/app/public/thumbnails/'.$fileName;
+            $img = Image::make($thumbnailpath)->resize(680, 510, function($constraint) {
                 $constraint->aspectRatio();
+                $constraint->upsize();
             });
 
             $img->save($thumbnailpath);
@@ -157,9 +158,10 @@ class PostController extends Controller
         $image->storeAs('public/thumbnails', $fileName);
 
         //Resize image here
-        $thumbnailpath = public_path('public/thumbnails/'.$fileName);
-        $img = Image::make($thumbnailpath)->resize(400, 150, function($constraint) {
+        $thumbnailpath = 'storage/app/public/thumbnails/'.$fileName;
+        $img = Image::make($thumbnailpath)->resize(680, 510, function($constraint) {
             $constraint->aspectRatio();
+            $constraint->upsize();
         });
 
         $img->save($thumbnailpath);

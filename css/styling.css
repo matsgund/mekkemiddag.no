@@ -1,7 +1,14 @@
 
+/* container wrapper */
+.cointainer-wrapper {
+    display: grid;
+    justify-content: center;
+}
+
 /* Container */
 .container {
     display: grid;
+    max-width: 2000px;
 }
 
 /* 1. row */
