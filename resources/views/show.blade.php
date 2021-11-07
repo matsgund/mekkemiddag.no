@@ -16,7 +16,7 @@ $newArray2 = explode(',', $array);
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Oppskrifter</title>
+    <title>Mekkemiddag.no</title>
     <!-- CSS -->
     <link rel="stylesheet" href="{{ env('APP_CSS_FOLDER_LOCATION1') }}css/styling.css">
     <link rel="stylesheet" href="{{ env('APP_CSS_FOLDER_LOCATION1') }}css/recipe.css">

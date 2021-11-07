@@ -27,8 +27,8 @@
 
         <!-- row 1 -->
         <div class="row1">
-            <h1>Oppskrifter</h1>
-            <h3>Her kan du søke i mine oppskrifter</h3>
+            <h1>Mekkemiddag.no</h1>
+            <h3>Her kan du søke i oppskrifter som er enkle å lage!</h3>
         </div>
 
         <!-- row 2 -->

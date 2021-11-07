@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Oppskrifter</title>
+    <title>Mekkemiddag.no</title>
     <!-- CSS -->
     <link rel="stylesheet" href="{{ env('APP_CSS_FOLDER_LOCATION2') }}css/styling.css">
     <link rel="stylesheet" href="{{ env('APP_CSS_FOLDER_LOCATION2') }}css/slider.css">
@@ -29,8 +29,8 @@
 
         <!-- row 1 -->
         <div class="row1">
-            <h1>Oppskrifter</h1>
-            <h3>Her kan du søke i mine oppskrifter</h3>
+            <h1>Mekkemiddag.no</h1>
+            <h3>Her kan du søke i oppskrifter som er enkle å lage!</h3>
         </div>
 
         <!-- row 2 -->
@@ -48,7 +48,7 @@
                         <div class="overlay-slider-textbox">
                             <h3>Pizza  <br>med parmaskinke</h3>
                             <p>Januar 30, 2018  <i class="fa fa-circle"></i>Hovedrett</p>
-                            <a href="/public/post/70">Se oppskriften</a>
+                            <a href="{{ env('APP_URL') }}/post/70">Se oppskriften</a>
                         </div>
                     </article>
 
@@ -58,7 +58,7 @@
                         <div class="overlay-slider-textbox">
                             <h3>Brød  <br>frøloff</h3>
                             <p>Februar 30, 2018  <i class="fa fa-circle"></i>Bakverk</p>
-                            <a href="/post/67">Se oppskriften</a>
+                            <a href="{{ env('APP_URL') }}/post/67">Se oppskriften</a>
                         </div>
                     </article>
 
@@ -68,7 +68,7 @@
                         <div class="overlay-slider-textbox">
                             <h3>Tomat <br>suppe</h3>
                             <p>Mars 30, 2018  <i class="fa fa-circle"></i>Hovedrett</p>
-                            <a href="/post/71">Se oppskriften</a>
+                            <a href="{{ env('APP_URL') }}/post/71">Se oppskriften</a>
                         </div>
                     </article>
 
