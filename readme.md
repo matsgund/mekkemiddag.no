@@ -13,5 +13,5 @@ Web site for food recipes. Created with PHP LARAVEL.
 4. Run command: php artisan key:generate
 5. Download and connect your local database
 
-#Website URL: 
+## Website URL: 
 https://www.mekkemiddag.no/
